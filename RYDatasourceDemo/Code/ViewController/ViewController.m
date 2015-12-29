@@ -32,7 +32,7 @@
     // 初始化datasource
     [self configDataSource];
     
-    // 设置tableview属性
+    // 初始化tableview
     [self configTableView];
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -69,9 +69,9 @@
         // cell样式
         [cell configCellWithEntity:entity];
     };
-    RSCellClickBlock cellClickBlock = ^(id obj){
+    RSCellSelectedBlock cellClickBlock = ^(id obj){
         // cell点击事件
-        [self cellClickActionWithObj:obj];
+        [self cellSelectedWithObj:obj];
     };
     
     // 初始化dataSource
@@ -111,7 +111,7 @@
 
 #pragma mark -
 #pragma mark - Action
-- (void)cellClickActionWithObj:(id)obj
+- (void)cellSelectedWithObj:(id)obj
 {
     NSLog(@"%@",obj);
 }
