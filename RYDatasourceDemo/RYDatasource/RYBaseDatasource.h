@@ -2,22 +2,22 @@
 //  RYBaseDatasource.h
 //  RYDatasourceDemo
 //
-//  Created by billionsfinance-resory on 15/12/29.
+//  Created by Resory on 15/12/29.
 //  Copyright © 2015年 Resory. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef void(^RYCellConfigBlock)(id cell, id entity);       // cell设置样式block
-typedef void(^RYCellSelectedBlock)(id obj);                  // cell点击事件
+typedef void(^RYCellConfigBlock)(id cell, id entity);
+typedef void(^RYCellSelectedBlock)(id obj);
 
 @interface RYBaseDatasource : NSObject <UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, copy) NSArray *cellIdentifiers;
-@property (nonatomic, copy) NSArray *serverData;
-@property (nonatomic, copy) RYCellConfigBlock cellBlock;
-@property (nonatomic, copy) RYCellSelectedBlock cellClickBlock;
+@property (nonatomic, copy) NSArray *cellIdentifiers;             // cell样式选择
+@property (nonatomic, copy) NSArray *serverData;                  // cell数据
+@property (nonatomic, copy) RYCellConfigBlock cellBlock;          // cell设置样式block
+@property (nonatomic, copy) RYCellSelectedBlock cellClickBlock;   // cell点击事件
 
 /**
  *  初始化dataSource

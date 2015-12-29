@@ -15,14 +15,14 @@
 		030EE2E51C32217F00F0C298 /* RYDatasourceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE2E41C32217F00F0C298 /* RYDatasourceDemoTests.m */; };
 		030EE2F01C32217F00F0C298 /* RYDatasourceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE2EF1C32217F00F0C298 /* RYDatasourceDemoUITests.m */; };
 		030EE30D1C32242400F0C298 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE30C1C32242400F0C298 /* ViewController.m */; };
-		030EE3101C32265000F0C298 /* UITableViewCell+RYDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE30F1C32265000F0C298 /* UITableViewCell+RYDatasource.m */; };
-		030EE3191C32268400F0C298 /* RYBaseDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE3181C32268400F0C298 /* RYBaseDatasource.m */; };
 		030EE31C1C3226FE00F0C298 /* TDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE31B1C3226FE00F0C298 /* TDatasource.m */; };
 		030EE3201C32274300F0C298 /* TCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE31E1C32274300F0C298 /* TCellOne.m */; };
 		030EE3211C32274300F0C298 /* TCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EE31F1C32274300F0C298 /* TCellOne.xib */; };
 		030EE3251C32275000F0C298 /* TCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE3231C32275000F0C298 /* TCellTwo.m */; };
 		030EE3261C32275000F0C298 /* TCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EE3241C32275000F0C298 /* TCellTwo.xib */; };
 		030EE32A1C3234E600F0C298 /* TModelOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE3291C3234E600F0C298 /* TModelOne.m */; };
+		030EE32F1C327BD200F0C298 /* RYBaseDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE32C1C327BD200F0C298 /* RYBaseDatasource.m */; };
+		030EE3301C327BD200F0C298 /* UITableViewCell+RYDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE32E1C327BD200F0C298 /* UITableViewCell+RYDatasource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +59,6 @@
 		030EE2F11C32217F00F0C298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		030EE30B1C32242400F0C298 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		030EE30C1C32242400F0C298 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		030EE30E1C32265000F0C298 /* UITableViewCell+RYDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+RYDatasource.h"; sourceTree = "<group>"; };
-		030EE30F1C32265000F0C298 /* UITableViewCell+RYDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+RYDatasource.m"; sourceTree = "<group>"; };
-		030EE3171C32268400F0C298 /* RYBaseDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYBaseDatasource.h; sourceTree = "<group>"; };
-		030EE3181C32268400F0C298 /* RYBaseDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYBaseDatasource.m; sourceTree = "<group>"; };
 		030EE31A1C3226FE00F0C298 /* TDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDatasource.h; sourceTree = "<group>"; };
 		030EE31B1C3226FE00F0C298 /* TDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDatasource.m; sourceTree = "<group>"; };
 		030EE31D1C32274300F0C298 /* TCellOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCellOne.h; sourceTree = "<group>"; };
@@ -73,6 +69,10 @@
 		030EE3241C32275000F0C298 /* TCellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCellTwo.xib; sourceTree = "<group>"; };
 		030EE3281C3234E600F0C298 /* TModelOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TModelOne.h; sourceTree = "<group>"; };
 		030EE3291C3234E600F0C298 /* TModelOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TModelOne.m; sourceTree = "<group>"; };
+		030EE32B1C327BD200F0C298 /* RYBaseDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RYBaseDatasource.h; path = RYDatasource/RYBaseDatasource.h; sourceTree = SOURCE_ROOT; };
+		030EE32C1C327BD200F0C298 /* RYBaseDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RYBaseDatasource.m; path = RYDatasource/RYBaseDatasource.m; sourceTree = SOURCE_ROOT; };
+		030EE32D1C327BD200F0C298 /* UITableViewCell+RYDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+RYDatasource.h"; path = "RYDatasource/UITableViewCell+RYDatasource.h"; sourceTree = SOURCE_ROOT; };
+		030EE32E1C327BD200F0C298 /* UITableViewCell+RYDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+RYDatasource.m"; path = "RYDatasource/UITableViewCell+RYDatasource.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +165,10 @@
 		030EE2FD1C32221400F0C298 /* RSDatasource */ = {
 			isa = PBXGroup;
 			children = (
-				030EE30E1C32265000F0C298 /* UITableViewCell+RYDatasource.h */,
-				030EE30F1C32265000F0C298 /* UITableViewCell+RYDatasource.m */,
-				030EE3171C32268400F0C298 /* RYBaseDatasource.h */,
-				030EE3181C32268400F0C298 /* RYBaseDatasource.m */,
+				030EE32B1C327BD200F0C298 /* RYBaseDatasource.h */,
+				030EE32C1C327BD200F0C298 /* RYBaseDatasource.m */,
+				030EE32D1C327BD200F0C298 /* UITableViewCell+RYDatasource.h */,
+				030EE32E1C327BD200F0C298 /* UITableViewCell+RYDatasource.m */,
 			);
 			path = RSDatasource;
 			sourceTree = "<group>";
@@ -357,13 +357,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				030EE30D1C32242400F0C298 /* ViewController.m in Sources */,
+				030EE3301C327BD200F0C298 /* UITableViewCell+RYDatasource.m in Sources */,
 				030EE3201C32274300F0C298 /* TCellOne.m in Sources */,
 				030EE2CF1C32217F00F0C298 /* AppDelegate.m in Sources */,
 				030EE3251C32275000F0C298 /* TCellTwo.m in Sources */,
 				030EE32A1C3234E600F0C298 /* TModelOne.m in Sources */,
 				030EE2CC1C32217F00F0C298 /* main.m in Sources */,
-				030EE3191C32268400F0C298 /* RYBaseDatasource.m in Sources */,
-				030EE3101C32265000F0C298 /* UITableViewCell+RYDatasource.m in Sources */,
+				030EE32F1C327BD200F0C298 /* RYBaseDatasource.m in Sources */,
 				030EE31C1C3226FE00F0C298 /* TDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +588,7 @@
 				030EE2F61C32217F00F0C298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		030EE2F71C32217F00F0C298 /* Build configuration list for PBXNativeTarget "RYDatasourceDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -596,6 +597,7 @@
 				030EE2F91C32217F00F0C298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		030EE2FA1C32217F00F0C298 /* Build configuration list for PBXNativeTarget "RYDatasourceDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -604,6 +606,7 @@
 				030EE2FC1C32217F00F0C298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
