@@ -6,8 +6,8 @@
 //  Copyright © 2015年 Resory. All rights reserved.
 //
 
-#import "RSBaseDatasource.h"
+#import "RYBaseDatasource.h"
 
-@interface TDatasource : RSBaseDatasource
+@interface TDatasource : RYBaseDatasource
 
 @end

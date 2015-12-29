@@ -6,14 +6,14 @@
 //  Copyright © 2015年 Resory. All rights reserved.
 //
 
-#import "RSBaseDatasource.h"
+#import "RYBaseDatasource.h"
 
-@implementation RSBaseDatasource
+@implementation RYBaseDatasource
 
 // 初始化
 - (id)initWithServerData:(NSArray *)serverData
       andCellIdentifiers:(NSArray *)identifiers
-      andCellConfigBlock:(RSCellConfigBlock)cellBlock
+      andCellConfigBlock:(RYCellConfigBlock)cellBlock
 {
     self = [super init];
     if(self)

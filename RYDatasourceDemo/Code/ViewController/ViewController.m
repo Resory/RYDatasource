@@ -65,11 +65,11 @@
     [self configIdentifier];
     
     // cellblock事件
-    RSCellConfigBlock configBlock = ^(UITableViewCell *cell , id entity){
+    RYCellConfigBlock configBlock = ^(UITableViewCell *cell , id entity){
         // cell样式
         [cell configCellWithEntity:entity];
     };
-    RSCellSelectedBlock cellClickBlock = ^(id obj){
+    RYCellSelectedBlock cellClickBlock = ^(id obj){
         // cell点击事件
         [self cellSelectedWithObj:obj];
     };

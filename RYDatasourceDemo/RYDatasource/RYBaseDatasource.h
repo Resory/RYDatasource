@@ -1,5 +1,5 @@
 //
-//  RSBaseDatasource.h
+//  RYBaseDatasource.h
 //  RYDatasourceDemo
 //
 //  Created by billionsfinance-resory on 15/12/29.
@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef void(^RSCellConfigBlock)(id cell, id entity);       // cell设置样式block
-typedef void(^RSCellSelectedBlock)(id obj);                  // cell点击事件
+typedef void(^RYCellConfigBlock)(id cell, id entity);       // cell设置样式block
+typedef void(^RYCellSelectedBlock)(id obj);                  // cell点击事件
 
-@interface RSBaseDatasource : NSObject <UITableViewDelegate,UITableViewDataSource>
+@interface RYBaseDatasource : NSObject <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, copy) NSArray *cellIdentifiers;
 @property (nonatomic, copy) NSArray *serverData;
-@property (nonatomic, copy) RSCellConfigBlock cellBlock;
-@property (nonatomic, copy) RSCellSelectedBlock cellClickBlock;
+@property (nonatomic, copy) RYCellConfigBlock cellBlock;
+@property (nonatomic, copy) RYCellSelectedBlock cellClickBlock;
 
 /**
  *  初始化dataSource
@@ -30,6 +30,6 @@ typedef void(^RSCellSelectedBlock)(id obj);                  // cell点击事件
  */
 - (id)initWithServerData:(NSArray *)serverData
       andCellIdentifiers:(NSArray *)identifiers
-      andCellConfigBlock:(RSCellConfigBlock)cellBlock;
+      andCellConfigBlock:(RYCellConfigBlock)cellBlock;
 
 @end
