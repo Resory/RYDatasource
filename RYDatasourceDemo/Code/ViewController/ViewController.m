@@ -15,7 +15,8 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
-@property (nonatomic, strong) NSMutableArray *serverData;   // 服务器返回的数据
+@property (nonatomic, strong) NSMutableArray *serverData;       // 服务器返回的数据
+@property (nonatomic, strong) NSMutableArray *cellIdentifiers;  // cell样式标示
 @property (nonatomic, strong) TDatasource *dataSource;
 
 @end
@@ -28,8 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configData];
+    // 初始化datasource
+    [self configDataSource];
     
+    // 设置tableview属性
     [self configTableView];
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -38,6 +41,44 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+#pragma mark - Config Tableview
+- (void)configTableView
+{
+    // 把_dataSource设置成_tableview的代理,以后所有代理方法都在_dataSource实现
+    _tableview.delegate = _dataSource;
+    _tableview.dataSource = _dataSource;
+    _tableview.tableFooterView = [UIView new];
+}
+
+#pragma mark -
+#pragma mark - Config DataSource
+
+- (void)configDataSource
+{
+    // cell数据
+    [self configData];
+    
+    // cell复用
+    [self configIdentifier];
+    
+    // cellblock事件
+    RSCellConfigBlock configBlock = ^(UITableViewCell *cell , id entity){
+        // cell样式
+        [cell configCellWithEntity:entity];
+    };
+    RSCellClickBlock cellClickBlock = ^(id obj){
+        // cell点击事件
+        [self cellClickActionWithObj:obj];
+    };
+    
+    // 初始化dataSource
+    _dataSource = [[TDatasource alloc] initWithServerData:_serverData
+                                       andCellIdentifiers:_cellIdentifiers
+                                       andCellConfigBlock:configBlock];
+    _dataSource.cellClickBlock = cellClickBlock;
 }
 
 - (void)configData
@@ -58,37 +99,14 @@
     [_serverData addObject:two];
 }
 
-#pragma mark -
-#pragma mark - Config
-- (void)configTableView
+- (void)configIdentifier
 {
-    _tableview.tableFooterView = [UIView new];
-    
-    // cell类型(用具体的cell class来做唯一标示)
-    NSArray *cellIdentifiers = @[NSStringFromClass([TCellOne class])];
-    [_tableview registerNib:[TCellOne nib] forCellReuseIdentifier:cellIdentifiers[0]];
-    
-    // cell的样式在block中配置
-    RSCellConfigBlock configBlock = ^(UITableViewCell *cell , id entity)
-    {
-        [cell configCellWithEntity:entity];
-    };
-    
-    // cell点击事件
-    RSCellClickBlock cellClickBlock = ^(id obj)
-    {
-        [self cellClickActionWithObj:obj];
-    };
-    
-    // 初始化_dataSource
-    _dataSource = [[TDatasource alloc] initWithServerData:_serverData
-                                       andCellIdentifiers:cellIdentifiers
-                                       andCellConfigBlock:configBlock];
-    _dataSource.cellClickBlock = cellClickBlock;
-    
-    // 把_dataSource设置成_tableview的代理,以后所有代理方法都在_dataSource实现
-    _tableview.delegate = _dataSource;
-    _tableview.dataSource = _dataSource;
+    // cell复用设置
+    _cellIdentifiers = [[NSMutableArray alloc] init];
+    [_cellIdentifiers addObject:NSStringFromClass([TCellOne class])];
+    [_cellIdentifiers addObject:NSStringFromClass([TCellTwo class])];
+    [_tableview registerNib:[TCellOne nib] forCellReuseIdentifier:_cellIdentifiers[0]];
+    [_tableview registerNib:[TCellTwo nib] forCellReuseIdentifier:_cellIdentifiers[1]];
 }
 
 #pragma mark -
