@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef void(^RSCellConfigBlock)(id cell, id entity);
+typedef void(^RSCellConfigBlock)(id cell, id entity);       // cell设置样式block
+typedef void(^RSCellClickBlock)(id obj);                  // cell点击事件
 
 @interface RSBaseDatasource : NSObject <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, copy) NSArray *cellIdentifiers;
 @property (nonatomic, copy) NSArray *serverData;
 @property (nonatomic, copy) RSCellConfigBlock cellBlock;
+@property (nonatomic, copy) RSCellClickBlock cellClickBlock;
 
 /**
  *  初始化dataSource

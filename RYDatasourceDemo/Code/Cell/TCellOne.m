@@ -7,6 +7,7 @@
 //
 
 #import "TCellOne.h"
+#import "TModelOne.h"
 
 @implementation TCellOne
 
@@ -20,4 +21,13 @@
     // Configure the view for the selected state
 }
 
+- (void)configCellWithEntity:(id)entity
+{
+    if(entity)
+    {
+        TModelOne *model = entity;
+        self.name.text = model.name;
+        self.avartar.image = [UIImage imageNamed:model.imageName];
+    }
+}
 @end

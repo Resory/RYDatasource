@@ -22,6 +22,7 @@
 		030EE3211C32274300F0C298 /* TCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EE31F1C32274300F0C298 /* TCellOne.xib */; };
 		030EE3251C32275000F0C298 /* TCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE3231C32275000F0C298 /* TCellTwo.m */; };
 		030EE3261C32275000F0C298 /* TCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EE3241C32275000F0C298 /* TCellTwo.xib */; };
+		030EE32A1C3234E600F0C298 /* TModelOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE3291C3234E600F0C298 /* TModelOne.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		030EE3221C32275000F0C298 /* TCellTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCellTwo.h; sourceTree = "<group>"; };
 		030EE3231C32275000F0C298 /* TCellTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCellTwo.m; sourceTree = "<group>"; };
 		030EE3241C32275000F0C298 /* TCellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCellTwo.xib; sourceTree = "<group>"; };
+		030EE3281C3234E600F0C298 /* TModelOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TModelOne.h; sourceTree = "<group>"; };
+		030EE3291C3234E600F0C298 /* TModelOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TModelOne.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,7 @@
 		030EE3071C32242400F0C298 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				030EE3271C3234BF00F0C298 /* Model */,
 				030EE3081C32242400F0C298 /* Cell */,
 				030EE3091C32242400F0C298 /* Datasource */,
 				030EE30A1C32242400F0C298 /* ViewController */,
@@ -209,6 +213,15 @@
 				030EE30C1C32242400F0C298 /* ViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		030EE3271C3234BF00F0C298 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				030EE3281C3234E600F0C298 /* TModelOne.h */,
+				030EE3291C3234E600F0C298 /* TModelOne.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +360,7 @@
 				030EE3201C32274300F0C298 /* TCellOne.m in Sources */,
 				030EE2CF1C32217F00F0C298 /* AppDelegate.m in Sources */,
 				030EE3251C32275000F0C298 /* TCellTwo.m in Sources */,
+				030EE32A1C3234E600F0C298 /* TModelOne.m in Sources */,
 				030EE2CC1C32217F00F0C298 /* main.m in Sources */,
 				030EE3191C32268400F0C298 /* RSBaseDatasource.m in Sources */,
 				030EE3101C32265000F0C298 /* UITableViewCell+RYDatasource.m in Sources */,

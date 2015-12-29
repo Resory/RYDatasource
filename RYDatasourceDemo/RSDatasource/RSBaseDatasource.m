@@ -10,6 +10,7 @@
 
 @implementation RSBaseDatasource
 
+// 初始化
 - (id)initWithServerData:(NSArray *)serverData
       andCellIdentifiers:(NSArray *)identifiers
       andCellConfigBlock:(RSCellConfigBlock)cellBlock
