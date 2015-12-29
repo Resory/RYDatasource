@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		030EE2CC1C32217F00F0C298 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE2CB1C32217F00F0C298 /* main.m */; };
 		030EE2CF1C32217F00F0C298 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE2CE1C32217F00F0C298 /* AppDelegate.m */; };
-		030EE2D21C32217F00F0C298 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE2D11C32217F00F0C298 /* ViewController.m */; };
 		030EE2D51C32217F00F0C298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030EE2D31C32217F00F0C298 /* Main.storyboard */; };
 		030EE2D71C32217F00F0C298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030EE2D61C32217F00F0C298 /* Assets.xcassets */; };
 		030EE2DA1C32217F00F0C298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030EE2D81C32217F00F0C298 /* LaunchScreen.storyboard */; };
 		030EE2E51C32217F00F0C298 /* RYDatasourceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE2E41C32217F00F0C298 /* RYDatasourceDemoTests.m */; };
 		030EE2F01C32217F00F0C298 /* RYDatasourceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE2EF1C32217F00F0C298 /* RYDatasourceDemoUITests.m */; };
+		030EE30D1C32242400F0C298 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030EE30C1C32242400F0C298 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		030EE2CB1C32217F00F0C298 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		030EE2CD1C32217F00F0C298 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		030EE2CE1C32217F00F0C298 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		030EE2D01C32217F00F0C298 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		030EE2D11C32217F00F0C298 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		030EE2D41C32217F00F0C298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		030EE2D61C32217F00F0C298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030EE2D91C32217F00F0C298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		030EE2EB1C32217F00F0C298 /* RYDatasourceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYDatasourceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		030EE2EF1C32217F00F0C298 /* RYDatasourceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYDatasourceDemoUITests.m; sourceTree = "<group>"; };
 		030EE2F11C32217F00F0C298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		030EE30B1C32242400F0C298 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		030EE30C1C32242400F0C298 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +81,7 @@
 		030EE2BE1C32217F00F0C298 = {
 			isa = PBXGroup;
 			children = (
+				030EE3071C32242400F0C298 /* Code */,
 				030EE2FD1C32221400F0C298 /* RSDatasource */,
 				030EE2C91C32217F00F0C298 /* RYDatasourceDemo */,
 				030EE2E31C32217F00F0C298 /* RYDatasourceDemoTests */,
@@ -102,9 +103,6 @@
 		030EE2C91C32217F00F0C298 /* RYDatasourceDemo */ = {
 			isa = PBXGroup;
 			children = (
-				030EE3001C32224C00F0C298 /* ViewController */,
-				030EE2FF1C32224300F0C298 /* Datasource */,
-				030EE2FE1C32223800F0C298 /* Cell */,
 				030EE2CD1C32217F00F0C298 /* AppDelegate.h */,
 				030EE2CE1C32217F00F0C298 /* AppDelegate.m */,
 				030EE2D31C32217F00F0C298 /* Main.storyboard */,
@@ -149,27 +147,37 @@
 			path = RSDatasource;
 			sourceTree = "<group>";
 		};
-		030EE2FE1C32223800F0C298 /* Cell */ = {
+		030EE3071C32242400F0C298 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				030EE3081C32242400F0C298 /* Cell */,
+				030EE3091C32242400F0C298 /* Datasource */,
+				030EE30A1C32242400F0C298 /* ViewController */,
 			);
-			name = Cell;
+			path = Code;
 			sourceTree = "<group>";
 		};
-		030EE2FF1C32224300F0C298 /* Datasource */ = {
+		030EE3081C32242400F0C298 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Datasource;
+			path = Cell;
 			sourceTree = "<group>";
 		};
-		030EE3001C32224C00F0C298 /* ViewController */ = {
+		030EE3091C32242400F0C298 /* Datasource */ = {
 			isa = PBXGroup;
 			children = (
-				030EE2D01C32217F00F0C298 /* ViewController.h */,
-				030EE2D11C32217F00F0C298 /* ViewController.m */,
 			);
-			name = ViewController;
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		030EE30A1C32242400F0C298 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				030EE30B1C32242400F0C298 /* ViewController.h */,
+				030EE30C1C32242400F0C298 /* ViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030EE2D21C32217F00F0C298 /* ViewController.m in Sources */,
+				030EE30D1C32242400F0C298 /* ViewController.m in Sources */,
 				030EE2CF1C32217F00F0C298 /* AppDelegate.m in Sources */,
 				030EE2CC1C32217F00F0C298 /* main.m in Sources */,
 			);
