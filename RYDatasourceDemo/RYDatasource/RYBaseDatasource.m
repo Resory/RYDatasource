@@ -17,8 +17,8 @@
     self = [super init];
     if(self)
     {
-        self.serverData = serverData;
-        self.cellIdentifiers = identifiers;
+        self.serverData = serverData;           // 数据
+        self.cellIdentifiers = identifiers;     // 复用
     }
     
     return self;
