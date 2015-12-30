@@ -17,7 +17,7 @@ typedef void(^RYCellSelectedBlock)(id obj);
 @property (nonatomic, copy) NSArray *cellIdentifiers;             // cell样式选择
 @property (nonatomic, copy) NSArray *serverData;                  // cell数据
 @property (nonatomic, copy) RYCellConfigBlock cellBlock;          // cell设置样式block
-@property (nonatomic, copy) RYCellSelectedBlock cellClickBlock;   // cell点击事件
+@property (nonatomic, copy) RYCellSelectedBlock cellSelectedBlock;   // cell点击事件
 
 /**
  *  初始化dataSource

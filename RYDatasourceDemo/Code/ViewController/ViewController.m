@@ -69,7 +69,7 @@
         // cell样式
         [cell configCellWithEntity:entity];
     };
-    RYCellSelectedBlock cellClickBlock = ^(id obj){
+    RYCellSelectedBlock cellSelectedBlock = ^(id obj){
         // cell点击事件
         [self cellSelectedWithObj:obj];
     };
@@ -78,7 +78,7 @@
     _dataSource = [[TDatasource alloc] initWithServerData:_serverData
                                        andCellIdentifiers:_cellIdentifiers
                                        andCellConfigBlock:configBlock];
-    _dataSource.cellClickBlock = cellClickBlock;
+    _dataSource.cellSelectedBlock = cellSelectedBlock;
 }
 
 - (void)configData
