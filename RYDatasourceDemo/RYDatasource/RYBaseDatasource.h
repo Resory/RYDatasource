@@ -8,15 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "UITableViewCell+RYDatasource.h"
 
-typedef void(^RYCellConfigBlock)(id cell, id entity);
 typedef void(^RYCellSelectedBlock)(id obj);
 
 @interface RYBaseDatasource : NSObject <UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, copy) NSArray *cellIdentifiers;             // cell样式选择
-@property (nonatomic, copy) NSArray *serverData;                  // cell数据
-@property (nonatomic, copy) RYCellConfigBlock cellBlock;          // cell设置样式block
+@property (nonatomic, copy) NSArray *cellIdentifiers;                // cell样式选择
+@property (nonatomic, copy) NSArray *serverData;                     // cell数据
 @property (nonatomic, copy) RYCellSelectedBlock cellSelectedBlock;   // cell点击事件
 
 /**
@@ -24,12 +23,10 @@ typedef void(^RYCellSelectedBlock)(id obj);
  *
  *  @param serverData  服务器返回数据
  *  @param identifiers cell类型
- *  @param cellBlock   cell具体执行block
  *
  *  @return Datasource
  */
 - (id)initWithServerData:(NSArray *)serverData
-      andCellIdentifiers:(NSArray *)identifiers
-      andCellConfigBlock:(RYCellConfigBlock)cellBlock;
+      andCellIdentifiers:(NSArray *)identifiers;
 
 @end

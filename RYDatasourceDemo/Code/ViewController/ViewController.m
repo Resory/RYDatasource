@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic, strong) NSMutableArray *serverData;       // 服务器返回的数据
 @property (nonatomic, strong) NSMutableArray *cellIdentifiers;  // cell样式标示
-@property (nonatomic, strong) TDatasource *dataSource;
+@property (nonatomic, strong) TDatasource *datasource;          // 中间人
 
 @end
 
@@ -48,8 +48,8 @@
 - (void)configTableView
 {
     // 把_dataSource设置成_tableview的代理,以后所有代理方法都在_dataSource实现
-    _tableview.delegate = _dataSource;
-    _tableview.dataSource = _dataSource;
+    _tableview.delegate = _datasource;
+    _tableview.dataSource = _datasource;
     _tableview.tableFooterView = [UIView new];
 }
 
@@ -64,21 +64,16 @@
     // cell复用
     [self configIdentifier];
     
-    // cellblock事件
-    RYCellConfigBlock configBlock = ^(UITableViewCell *cell , id entity){
-        // cell样式
-        [cell configCellWithEntity:entity];
-    };
+    // cell事件
     RYCellSelectedBlock cellSelectedBlock = ^(id obj){
         // cell点击事件
         [self cellSelectedWithObj:obj];
     };
     
     // 初始化dataSource
-    _dataSource = [[TDatasource alloc] initWithServerData:_serverData
-                                       andCellIdentifiers:_cellIdentifiers
-                                       andCellConfigBlock:configBlock];
-    _dataSource.cellSelectedBlock = cellSelectedBlock;
+    _datasource = [[TDatasource alloc] initWithServerData:_serverData
+                                       andCellIdentifiers:_cellIdentifiers];
+    _datasource.cellSelectedBlock = cellSelectedBlock;
 }
 
 - (void)configData
@@ -104,9 +99,7 @@
     // cell复用设置
     _cellIdentifiers = [[NSMutableArray alloc] init];
     [_cellIdentifiers addObject:NSStringFromClass([TCellOne class])];
-    [_cellIdentifiers addObject:NSStringFromClass([TCellTwo class])];
     [_tableview registerNib:[TCellOne nib] forCellReuseIdentifier:_cellIdentifiers[0]];
-    [_tableview registerNib:[TCellTwo nib] forCellReuseIdentifier:_cellIdentifiers[1]];
 }
 
 #pragma mark -

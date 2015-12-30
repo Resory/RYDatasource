@@ -15,7 +15,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifiers[0]
                                                             forIndexPath:indexPath];
     
-    self.cellBlock(cell,self.serverData[indexPath.row]);
+    [cell configCellWithEntity:self.serverData[indexPath.row]];
     
     return cell;
 }

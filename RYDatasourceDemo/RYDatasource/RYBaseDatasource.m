@@ -13,14 +13,12 @@
 // 初始化
 - (id)initWithServerData:(NSArray *)serverData
       andCellIdentifiers:(NSArray *)identifiers
-      andCellConfigBlock:(RYCellConfigBlock)cellBlock
 {
     self = [super init];
     if(self)
     {
         self.serverData = serverData;
         self.cellIdentifiers = identifiers;
-        self.cellBlock = cellBlock;
     }
     
     return self;
