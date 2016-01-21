@@ -64,10 +64,15 @@
     // cell复用
     [self configIdentifier];
     
+    __weak __typeof(self) weakSelf = self;
+    
     // cell事件
     RYCellSelectedBlock cellSelectedBlock = ^(id obj){
+        
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        
         // cell点击事件
-        [self cellSelectedWithObj:obj];
+        [strongSelf cellSelectedWithObj:obj];
     };
     
     // 初始化dataSource
